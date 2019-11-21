@@ -1,5 +1,5 @@
 import React from "react"
-import {Container,Col,Row} from "reactstrap"
+import {Container,Col} from "reactstrap"
 import WarningSign from "./WarningSign"
 import MyBadge from "./MyBadge"
 import SingleBook from "./SingleBook"
@@ -19,16 +19,8 @@ class MainComponent extends React.Component {
 <Col md="12">
     <SingleBook selectedBook={history[0]}></SingleBook>
 </Col>
-<Container>
-          <Row>
-          {history.map((bookEntry, index) => (
-              <Col md="3">
-                <BookList books={bookEntry} key={index} />
-              </Col>
-            ))}
-          </Row>
-        </Container> 
-        
+
+        <BookList></BookList>
             </Container>
          );
     }
